@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Final Project</title>
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        screens: {
+          xl: { "max": '1200px' },
+          lg: { "max": '992px' },
+          md: { "max": '768px' },
+          sm: { "max": '576px' },
+          xs: { "max": '327px' },
+        },
+        extend: {}
+      }
+    }
+  </script>
+  <!--Src: https://aamznn.vercel.app/  -->
+</head>
+
+<body class="bg-gray-100">
+  <div class="header">
+    <!-- header will be displayed in this part  -->
+  </div>
+  <!-- body  -->
+  <div class="relative">
+    <div class="slider bg-[url(../img/slide1.jpg)] bg-cover bg-center w-full h-[36rem]">
+      <div class="flex items-center justify-between w-full pt-28 px-4">
+        <img src="img/downArrow.png" alt="left arrow"
+          class="left-arrow w-10 h-10 cursor-pointer brightness-0 rotate-90">
+        <img src="img/downArrow.png" alt="left arrow"
+          class="right-arrow w-10 h-10 cursor-pointer brightness-0 -rotate-90">
+      </div>
+      <p class="text-sm bg-white text-center py-1.5 px-1 mx-10 mt-20 sm:mx-5">
+        You are on amazon.com. You can also shop on Amazon Iran for millions of products with fast local
+        delivery.
+        Click here to go to
+        <a href="#" class="text-emerald-800 pl-4 hover:text-red-500">amazon.de</a>
+      </p>
+    </div>
+    <!-- products  -->
+    <div
+      class="products-container grid-cols-5 gap-2 mx-10 my-7 -mt-72 lg:grid-cols-3 md:grid-cols-2 md:-mt-64 sm:grid-cols-1 sm:-mt-52 sm:mx-5">
+      <!-- products will be displayed in this part -->
+    </div>
+  </div>
+  <div class="footer">
+    <!-- footer will be displayed in this part  -->
+  </div>
+  <script type="module" src="js/app.js"></script>
+  <script type="module" src="js/header&footer.js"></script>
+</body>
+
+</html>

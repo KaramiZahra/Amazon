@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                screens: {
+                    xl: { "max": '1200px' },
+                    lg: { "max": '992px' },
+                    md: { "max": '768px' },
+                    sm: { "max": '576px' },
+                    xs: { "max": '327px' },
+                },
+                extend: {}
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-gray-100">
+    <div class="header">
+        <!-- header will be displayed in this part  -->
+    </div>
+    <!-- empty cart  -->
+    <div class="empty-cart bg-white rounded w-11/12 mx-auto mt-7 mb-[32rem] p-8 shadow-lg">
+        <h1 class="font-bold text-3xl">Your Amazon Basket is empty.</h1>
+        <p class="mt-4">Check products page for shopping.
+            <a href="index.html" class="text-blue-500 hover:text-blue-700">continue shopping</a>
+        </p>
+    </div>
+    <!-- added products  -->
+    <div class="product-cart grid grid-cols-4 gap-4 items-start mt-7 mx-7 lg:grid-cols-1 hidden">
+        <div class="bg-white rounded col-span-3 p-8 shadow-lg lg:col-span-1">
+            <h1 class="font-bold text-3xl mb-4">Shopping Basket</h1>
+            <a href="index.html" class="deselect-btn text-emerald-800 hover:text-red-500">Deselect all items</a>
+            <div class="border-b border-gray-200 w-full my-4"></div>
+            <!-- product  -->
+            <div class="product-container">
+
+            </div>
+            <p class="text-right mt-3 xs:text-center">Subtotal ( <span
+                    class="sub-total-count text-amber-800 font-bold">1</span> items ):
+                <span class="sub-total-price font-bold text-lg"></span>
+            </p>
+        </div>
+        <!-- total  -->
+        <div class="bg-white col-span-1 h-max rounded p-8 shadow-lg">
+            <p class="">Subtotal ( <span class="sub-total-count text-amber-800 font-bold">1</span> items ):</p>
+            <p class="sub-total-price font-bold text-2xl my-2">$12</p>
+            <input type="checkbox" id="gift2" name="gifts2">
+            <label for="gift2" class="text-sm">This will be a gift</label>
+            <a href="#" class="text-sm text-emerald-800 pl-4 hover:text-red-500">
+                Learn more</a>
+            <br>
+            <button class="bg-amber-300 w-full rounded shadow-md py-1 mt-7 hover:bg-amber-400">Proceed to
+                Checkout</button>
+        </div>
+    </div>
+    <div class="footer">
+        <!-- footer will be displayed in this part  -->
+    </div>
+    <script type="module" src="js/cart.js"></script>
+    <script type="module" src="js/header&footer.js"></script>
+</body>
+
+</html>
